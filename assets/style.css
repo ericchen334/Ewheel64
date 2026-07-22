@@ -1,14 +1,20 @@
 /* EWheel 个人博客：极简暗色系 */
 
 :root {
-  --bg: #0b1020;
-  --card: rgba(255, 255, 255, 0.06);
-  --border: rgba(255, 255, 255, 0.12);
-  --text: rgba(255, 255, 255, 0.92);
-  --muted: rgba(255, 255, 255, 0.68);
-  --brand: #8aa4ff;
-  --brand2: #4de2c0;
-  --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  /* 参考配色：橙 → 黄 → 粉（你发的色块图） */
+  --bg_top: #ff7a1a;
+  --bg_mid: #ffd66e;
+  --bg_bottom: #ff7aa9;
+
+  --bg: #fff6ea;
+  --card: rgba(255, 255, 255, 0.72);
+  --border: rgba(0, 0, 0, 0.10);
+  --text: rgba(18, 18, 18, 0.92);
+  --muted: rgba(18, 18, 18, 0.62);
+
+  --brand: #ff6a00;
+  --brand2: #ff4fa3;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
   --radius: 16px;
   --max: 980px;
 }
@@ -19,9 +25,10 @@ body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC",
     "Hiragino Sans GB", "Microsoft YaHei", Arial, "Noto Sans CJK SC", sans-serif;
-  background: radial-gradient(900px 500px at 10% 10%, rgba(138, 164, 255, 0.20), transparent 60%),
-    radial-gradient(900px 500px at 90% 20%, rgba(77, 226, 192, 0.14), transparent 55%),
-    var(--bg);
+  background:
+    radial-gradient(900px 520px at 12% 10%, rgba(255, 255, 255, 0.55), transparent 62%),
+    radial-gradient(820px 520px at 88% 18%, rgba(255, 255, 255, 0.35), transparent 60%),
+    linear-gradient(180deg, var(--bg_top) 0%, var(--bg_mid) 44%, var(--bg_bottom) 100%);
   color: var(--text);
   line-height: 1.65;
 }
@@ -48,8 +55,8 @@ a { color: inherit; text-decoration: none; }
   border-radius: 12px;
   display: grid; place-items: center;
   font-weight: 800;
-  background: linear-gradient(135deg, rgba(138, 164, 255, 0.95), rgba(77, 226, 192, 0.85));
-  color: #07101f;
+  background: linear-gradient(135deg, rgba(255, 106, 0, 0.98), rgba(255, 79, 163, 0.92));
+  color: rgba(255, 255, 255, 0.96);
 }
 
 .brand-mark {
@@ -58,8 +65,8 @@ a { color: inherit; text-decoration: none; }
   object-fit: cover;
   border-radius: 18px;
   display: block;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
-  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.55);
 }
 
 h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
@@ -74,9 +81,9 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
   padding: 8px 12px;
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.55);
 }
-.nav a:hover { border-color: rgba(138, 164, 255, 0.55); }
+.nav a:hover { border-color: rgba(255, 106, 0, 0.55); }
 
 .card {
   background: var(--card);
@@ -94,12 +101,12 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
   overflow: hidden;
   margin-bottom: 14px;
   padding: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.10);
   border-radius: 28px;
   background:
-    radial-gradient(700px 340px at 14% 12%, rgba(138, 164, 255, 0.24), transparent 55%),
-    radial-gradient(620px 320px at 88% 18%, rgba(77, 226, 192, 0.18), transparent 48%),
-    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+    radial-gradient(700px 340px at 14% 12%, rgba(255, 106, 0, 0.22), transparent 58%),
+    radial-gradient(640px 320px at 88% 18%, rgba(255, 79, 163, 0.18), transparent 52%),
+    linear-gradient(180deg, rgba(255,255,255,0.62), rgba(255,255,255,0.40));
   box-shadow: var(--shadow);
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
@@ -121,7 +128,7 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
   right: -120px;
   top: -120px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(77, 226, 192, 0.20), transparent 70%);
+  background: radial-gradient(circle, rgba(255, 79, 163, 0.18), transparent 70%);
 }
 
 .hero-cover::after {
@@ -130,7 +137,7 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
   left: -120px;
   bottom: -140px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(138, 164, 255, 0.18), transparent 72%);
+  background: radial-gradient(circle, rgba(255, 106, 0, 0.18), transparent 72%);
 }
 
 .hero-text,
@@ -145,9 +152,9 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
   gap: 8px;
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.60);
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  color: rgba(18, 18, 18, 0.72);
   font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -178,15 +185,15 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
 .meta-card {
   padding: 14px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(10px);
 }
 
 .meta-label {
   display: block;
   margin-bottom: 4px;
-  color: rgba(255, 255, 255, 0.56);
+  color: rgba(18, 18, 18, 0.56);
   font-size: 12px;
 }
 
@@ -204,8 +211,8 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
   position: relative;
   overflow: hidden;
   border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.11);
-  background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04));
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  background: linear-gradient(180deg, rgba(255,255,255,0.70), rgba(255,255,255,0.46));
   backdrop-filter: blur(14px);
 }
 
@@ -224,7 +231,7 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
 .badge-card span,
 .stat-strip span {
   display: block;
-  color: rgba(255, 255, 255, 0.52);
+  color: rgba(18, 18, 18, 0.56);
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -247,8 +254,8 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px);
   background-size: 34px 34px;
   mask-image: linear-gradient(180deg, rgba(0,0,0,0.9), rgba(0,0,0,0.2));
 }
@@ -290,9 +297,9 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
   inset: 0;
   z-index: 3;
   background:
-    linear-gradient(180deg, rgba(11,16,32,0.22), rgba(11,16,32,0.78)),
-    radial-gradient(420px 220px at 28% 18%, rgba(156,178,255,0.22), transparent 60%),
-    radial-gradient(420px 240px at 88% 72%, rgba(77,226,192,0.14), transparent 55%);
+    linear-gradient(180deg, rgba(255, 122, 26, 0.06), rgba(18, 18, 18, 0.34)),
+    radial-gradient(420px 220px at 28% 18%, rgba(255, 214, 110, 0.24), transparent 60%),
+    radial-gradient(420px 240px at 88% 72%, rgba(255, 122, 169, 0.18), transparent 55%);
   pointer-events: none;
 }
 
@@ -343,14 +350,14 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
   display: inline-block;
   padding: 10px 14px;
   border-radius: 12px;
-  background: linear-gradient(135deg, rgba(138, 164, 255, 0.95), rgba(77, 226, 192, 0.90));
-  color: #07101f;
+  background: linear-gradient(135deg, rgba(255, 106, 0, 0.98), rgba(255, 79, 163, 0.92));
+  color: rgba(255, 255, 255, 0.96);
   font-weight: 700;
 }
 .btn:hover { filter: brightness(1.04); }
 .btn-ghost {
   background: transparent;
-  border: 1px solid rgba(138, 164, 255, 0.55);
+  border: 1px solid rgba(255, 106, 0, 0.55);
   color: var(--text);
   font-weight: 600;
 }
@@ -403,8 +410,8 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
   margin-top: 6px;
   padding: 12px 14px;
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.62);
   color: var(--text);
   outline: none;
 }
@@ -422,8 +429,8 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
 .input:focus,
 .textarea:focus,
 .file-input:focus {
-  border-color: rgba(138, 164, 255, 0.55);
-  box-shadow: 0 0 0 4px rgba(138, 164, 255, 0.10);
+  border-color: rgba(255, 106, 0, 0.55);
+  box-shadow: 0 0 0 4px rgba(255, 106, 0, 0.12);
 }
 
 .form-actions,
@@ -439,9 +446,9 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
   align-items: center;
   justify-content: center;
   padding: 10px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.10);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.60);
   color: var(--text);
   cursor: pointer;
 }
@@ -453,7 +460,7 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
 
 .btn-secondary:hover,
 .mini-btn:hover {
-  border-color: rgba(138, 164, 255, 0.55);
+  border-color: rgba(255, 106, 0, 0.55);
 }
 
 .entry-list,
@@ -466,8 +473,8 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
 .entry-card {
   padding: 14px;
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .entry-card h4 {
@@ -490,8 +497,8 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
   margin: 0;
   padding: 12px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .upload-card img {
@@ -504,7 +511,7 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
 
 .upload-card figcaption {
   margin: 10px 0 12px;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(18, 18, 18, 0.78);
   font-size: 13px;
 }
 
@@ -521,14 +528,14 @@ h1 { margin: 0; font-size: 20px; letter-spacing: 0.2px; }
   gap: 8px;
   padding: 10px 12px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .tip {
   margin-top: 10px;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.54);
+  color: rgba(18, 18, 18, 0.54);
 }
 
 .footer { padding: 22px 0 40px; }
