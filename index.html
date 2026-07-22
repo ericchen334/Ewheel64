@@ -61,68 +61,7 @@
 
           <div class="glass-card visual-stage">
             <div class="visual-grid"></div>
-            <svg viewBox="0 0 640 360" class="car-illustration" role="img" aria-label="1比64 小车封面图形">
-              <defs>
-                <linearGradient id="carGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#9cb2ff" />
-                  <stop offset="100%" stop-color="#4de2c0" />
-                </linearGradient>
-                <linearGradient id="lineGlow" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="rgba(156,178,255,0)" />
-                  <stop offset="50%" stop-color="#9cb2ff" />
-                  <stop offset="100%" stop-color="rgba(77,226,192,0)" />
-                </linearGradient>
-                <filter id="softBlur">
-                  <feGaussianBlur stdDeviation="10" />
-                </filter>
-              </defs>
-
-              <ellipse cx="315" cy="255" rx="220" ry="34" fill="rgba(77,226,192,0.12)" filter="url(#softBlur)" />
-              <path
-                d="M120 222
-                   C150 196, 190 170, 258 162
-                   L370 150
-                   C409 146, 450 161, 482 194
-                   L537 203
-                   C555 206, 567 215, 568 228
-                   L571 241
-                   C572 250, 565 257, 554 257
-                   L530 257
-                   C525 229, 500 210, 468 210
-                   C438 210, 411 228, 403 257
-                   L238 257
-                   C233 228, 207 210, 176 210
-                   C146 210, 120 229, 111 257
-                   L94 257
-                   C81 257, 73 249, 75 237
-                   L80 225
-                   C84 216, 94 211, 110 212
-                   Z"
-                fill="rgba(9,14,28,0.88)"
-                stroke="url(#carGlow)"
-                stroke-width="4"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M191 190
-                   L277 178
-                   C304 175, 330 176, 355 180
-                   L421 189
-                   C397 166, 378 159, 350 160
-                   L255 170
-                   C228 173, 207 178, 191 190Z"
-                fill="rgba(156,178,255,0.12)"
-                stroke="rgba(156,178,255,0.55)"
-                stroke-width="2"
-              />
-              <circle cx="176" cy="258" r="37" fill="#07101f" stroke="#9cb2ff" stroke-width="4" />
-              <circle cx="176" cy="258" r="18" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
-              <circle cx="468" cy="258" r="37" fill="#07101f" stroke="#4de2c0" stroke-width="4" />
-              <circle cx="468" cy="258" r="18" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
-              <path d="M108 284 L538 284" stroke="url(#lineGlow)" stroke-width="4" stroke-linecap="round" />
-              <circle cx="126" cy="219" r="6" fill="#9cb2ff" />
-              <circle cx="535" cy="215" r="6" fill="#4de2c0" />
-            </svg>
+            <div class="hero-slideshow" id="hero-slideshow" aria-label="封面图片轮播"></div>
           </div>
 
           <div class="glass-card stat-strip">

@@ -229,10 +229,62 @@ function setupEditableModule(pageKey) {
   renderUploads();
 }
 
+function initHeroSlideshow() {
+  const wrapper = document.getElementById("hero-slideshow");
+  if (!wrapper) return;
+
+  const prefersReduced =
+    window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const images = [
+    "/assets/cover-1.jpg",
+    "/assets/cover-2.jpg",
+    "/assets/cover-3.jpg",
+    "/assets/cover-4.jpg",
+  ];
+
+  const slides = images.map((src, index) => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = `封面图片 ${index + 1}`;
+    img.loading = index === 0 ? "eager" : "lazy";
+    img.decoding = "async";
+    img.className = "hero-slide";
+    wrapper.appendChild(img);
+    return img;
+  });
+
+  let current = 0;
+  slides[current]?.classList.add("is-active");
+
+  if (prefersReduced || slides.length <= 1) return;
+
+  const intervalMs = 3800;
+  let timer = window.setInterval(next, intervalMs);
+
+  function next() {
+    slides[current]?.classList.remove("is-active");
+    current = (current + 1) % slides.length;
+    slides[current]?.classList.add("is-active");
+  }
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      window.clearInterval(timer);
+    } else {
+      timer = window.setInterval(next, intervalMs);
+    }
+  });
+}
+
 setYear();
 bindShareholders();
 
 const currentPage = document.body.dataset.page;
 if (currentPage === "alloy" || currentPage === "resin") {
   setupEditableModule(currentPage);
+}
+
+if (currentPage === "home") {
+  initHeroSlideshow();
 }
