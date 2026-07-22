@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EWheel · 1:64 合金小车</title>
+    <meta name="description" content="EWheel 的 1:64 合金小车模块：开箱、评测、改装与收藏清单。" />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body data-page="alloy">
+    <header class="container header">
+      <div class="brand">
+        <img class="brand-mark" src="/assets/brand-logo.jpg" alt="EWheel 标识" />
+        <div>
+          <h1>EWheel</h1>
+          <p class="subtitle">模块：1:64 合金小车</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="/">主页</a>
+        <a href="/1-64-alloy/">合金</a>
+        <a href="/1-64-resin/">树脂</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="card hero">
+        <h2>1:64 合金小车</h2>
+        <p>
+          这个模块主要记录合金车的“把玩属性”：手感、涂装、轮胎滚动、开模细节，以及与同题材车型的简单对比。
+        </p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h3>栏目建议：开箱</h3>
+          <p class="muted">到手第一时间拍一组基础图：正侧后、顶视、底盘、灯位与内饰。</p>
+          <ul class="list">
+            <li>包装与配件</li>
+            <li>漆面与瑕疵（灰尘点/橘皮/漏印）</li>
+            <li>轮子与姿态（车高/轮眉/蹭胎）</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>栏目建议：评测</h3>
+          <p class="muted">用统一模板快速对比：同品牌不同车、不同品牌同车。</p>
+          <ul class="list">
+            <li>比例与姿态</li>
+            <li>细节与工艺</li>
+            <li>综合评分（可选）</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="tools-grid">
+        <section class="card">
+          <h3>编辑模块</h3>
+          <p class="muted">你可以持续补充每台合金车的标题、观察记录或简短评测。</p>
+
+          <form class="editor-form" id="entry-form">
+            <label class="field-label">
+              标题
+              <input class="input" id="entry-title" type="text" placeholder="例如：Mini GT R34 蓝色版" />
+            </label>
+            <label class="field-label">
+              内容
+              <textarea class="textarea" id="entry-content" placeholder="写下开箱感受、轮组姿态、漆面细节或你的个人评分。"></textarea>
+            </label>
+            <div class="form-actions">
+              <button class="btn" type="submit">保存内容</button>
+              <button class="btn-secondary" type="button" id="entry-clear">清空全部内容</button>
+            </div>
+          </form>
+
+          <div class="entry-list" id="entry-list"></div>
+        </section>
+
+        <section class="card">
+          <h3>上传模块</h3>
+          <p class="muted">可上传合金车图片做展示，适合放开箱图、对比图或细节特写。</p>
+
+          <form class="upload-form" id="upload-form">
+            <label class="field-label">
+              图片说明
+              <input class="input" id="upload-caption" type="text" placeholder="例如：正侧后角度、轮毂细节、包装图" />
+            </label>
+            <label class="field-label">
+              选择图片
+              <input class="file-input" id="upload-files" type="file" accept="image/*" multiple />
+            </label>
+            <div class="form-actions">
+              <button class="btn" type="submit">上传并保存</button>
+              <button class="btn-secondary" type="button" id="upload-clear">清空全部图片</button>
+            </div>
+          </form>
+
+          <div class="upload-gallery" id="upload-gallery"></div>
+          <p class="tip">提示：当前为浏览器本地保存，单张图片不建议过大。</p>
+        </section>
+      </section>
+
+      <section class="card" style="margin-top: 14px;">
+        <h3>后续你可以怎么扩展</h3>
+        <ul class="list">
+          <li>新增页面：`/1-64-alloy/list/` 作为“收藏清单”</li>
+          <li>新增页面：`/1-64-alloy/mod/` 作为“改装记录”</li>
+          <li>每台车一个独立文章页：`/1-64-alloy/posts/车型名/`</li>
+        </ul>
+        <a class="link" href="/">← 返回主页</a>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p class="muted">© <span data-current-year></span> EWheel</p>
+    </footer>
+    <script src="/assets/site.js"></script>
+  </body>
+</html>
